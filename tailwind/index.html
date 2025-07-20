@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
 </head>
 <body>
     <h1 class="text-2xl font-bold underline">Hello World</h1>
-    <p class="text-3xl text-blue-600/100 dark:text-sky-400/100">The quick brown fox....</p>
-    <p class="text-3xl text-blue-600/75 dark:text-sky-400/75">The quick brown fox....</p>
+    <p class="text-3xl text-blue-600/100 dark:text-sky-400/100 text-clifford">The quick brown fox....</p>
+    <p class="text-3xl text-blue-600/75 dark:text-sky-400/75 bg-clifford">The quick brown fox....</p>
     <p class="text-3xl text-blue-600/50 dark:text-sky-400/50">The quick brown fox....</p>
     <p class="text-3xl text-blue-600/25 dark:text-sky-400/25">The quick brown fox....</p>
     <button class="cursor-pointer bg-blue-500 p-2 m-2 w-96 rounded-lg">Save</button>
+    <p class="text-base/10 p-2 border-6 border-sky-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, corrupti minus quasi nemo asperiores similique ipsam dolor magnam, magni fugiat impedit provident eum nobis enim, nisi a quaerat sunt rerum?
+    Deleniti vero necessitatibus eveniet sint incidunt nisi minima numquam non, obcaecati aperiam possimus nihil velit! Ab repellendus, perferendis nostrum exercitationem delectus quisquam soluta laudantium iusto quaerat, suscipit ducimus, esse eligendi?
+    Explicabo vel, quidem mollitia consequuntur obcaecati recusandae unde adipisci minus suscipit modi accusantium ullam porro dolore hic neque debitis pariatur dolorum cum nostrum commodi asperiores a delectus accusamus! Odit, nostrum!</p>
+    <div class="mask-+-form-50% bg-[url(./pic/dog.webp)] h-96"></div>
 </body>
 </html>
