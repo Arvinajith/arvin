@@ -1,6 +1,7 @@
 let formContainer= document.createElement("div");
 let mainContainer= document.getElementById("main");
 let listContainer = document.createElement("div");
+let searchContainer = document.createElement("div");
 listContainer.setAttribute(
   "class",
   "flex justify-start items-center p-4 flex-wrap gap-2"
@@ -15,8 +16,14 @@ formContainer.innerHTML = `
     <button id="save-btn" class="bg-blue-500 p-2 w-36 rounded-sm text-black font-semibold">Save</button>
 </form?
 `;
+searchContainer.innerHTML = `
+<form class="flex irems-center justify-center gap-1 flex-row">
+  <input tupe="text" id="search-input" class="focus:outline-none p-4 bg-slate-200 rounded-md w-[70%]" placeholder="search by student name"/>
+  <button class="cursor-pointer bg-blue-500 p-2 w-[20%] rounded-sm text-black font-semibold">Search</button>
+</form>
+`
 
-mainContainer.append(formContainer , listContainer);
+mainContainer.append(formContainer ,searchContainer, listContainer);
 let nameInput = document.getElementById("name-input");
 let batchInput = document.getElementById("batch-input");
 let courseInput = document.getElementById("course-input");
@@ -27,7 +34,23 @@ function removeInputField(){
     batchInput.value = "";
     courseInput.value = "";
 }
-let student_list = [];
+let student_list = [
+    {
+        student_name: "Sanjay",
+        student_batch: "b29",
+        student_course: "full stack",
+    },
+    {
+       student_name: "Arvin",
+       student_batch: "b29",
+       student_course: "full stack", 
+    },
+    {
+       student_name: "Gowtham",
+       student_batch: "b29",
+       student_course: "full stack", 
+    }
+];
 formContainer.addEventListener("submit",(e)=>{
     e.preventDefault();
     const newStudentObj = {
